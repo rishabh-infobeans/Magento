@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<layout version="0.1.0">
+    <default translate="label" name="page">
+        <reference name="head">
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/buyshop/bootstrap.css</name>
+            </action>
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/buyshop/etalage.css</name>
+            </action>
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/buyshop/megamenu.css</name>
+            </action>
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/buyshop/style.css</name>
+            </action>
+        </reference>
+    </default>
+    <catalog_product_view>
+        <reference name="head">
+            <action method="removeItem">
+                <type>skin_js</type>
+                <name>js/lib/elevatezoom/jquery.elevateZoom-3.0.8.min.js</name>
+            </action>
+            <action method="removeItem">
+                <type>skin_js</type>
+                <name>js/app.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <script>js/buyshop/jquery.etalage.min.js</script>
+            </action>
+            <action method="addJs">
+                <script>varien/configurable.js</script>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <script>js/buyshop/jquery.easydropdown.js</script>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <script>js/configurableswatches/swatches-product.js</script>
+            </action>
+        </reference>
+        <reference name="content">
+            <reference name="product.info">
+                <block type="review/product_view_list" name="product.info.product_additional_data" as="reviews" template="review/product/view/list.phtml">
+                    <block type="review/form" name="product.review.form" as="review_form">
+                        <block type="page/html_wrapper" name="product.review.form.fields.before" as="form_fields_before" translate="label">
+                            <label>Review Form Fields Before</label>
+                            <action method="setMayBeInvisible">
+                                <value>1</value>
+                            </action>
+                            <action method="setElementClass">
+                                <value>rewards</value>
+                            </action>
+                        </block>
+                    </block>
+                </block>
+            </reference>
+        </reference>
+    </catalog_product_view>
+    
+    <catalog_category_view>
+        <reference name="root">
+            <action method="setTemplate">
+                <template>page/2columns-left.phtml</template> 
+            </action>
+        </reference>
+        
+        <reference name="head">
+            <action method="addItem">
+                <type>skin_js</type>
+                <script>js/buyshop/jquery.jscrollpane.min.js</script>
+            </action>
+            <action method="setText">
+                <text><![CDATA[<script type="text/javascript" id="sourcecode">
+			$(function()
+			{
+				$('.scroll-pane').jScrollPane();
+			});
+		</script>]]></text> 
+            </action>
+        </reference>
+    </catalog_category_view>
+</layout>
