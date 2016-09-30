@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<config>
+    <menu>
+        <faq module="faq">
+            <title>FAQ</title>
+            <sort_order>100</sort_order>
+            <children>
+                <manage module="faq">
+                    <title>Manage FAQ</title>
+                    <sort_order>0</sort_order>
+                    <action>adminhtml/faq/index</action>
+                </manage>
+            </children>
+        </faq>
+    </menu>
+    <acl>
+        <resources>
+            <all>
+                <title>Allow Everything</title>
+            </all>
+            <admin>
+                <children>
+                    <faq translate="title" module="faq">
+                        <title>FAQ</title>
+                        <sort_order>10</sort_order>
+                        <children>
+                            <manage translate="title">
+                                <title>Manage Faq</title>
+                                <sort_order>0</sort_order>
+                            </manage>
+                        </children>
+                    </faq>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>
