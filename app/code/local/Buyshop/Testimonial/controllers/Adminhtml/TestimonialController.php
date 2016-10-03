@@ -1,14 +1,5 @@
 <?php
 
-/**
- * Magento Testimonial
- *
- * Testimonial Plus for Magento
- * Author: Hire Magento
- * Website: www.hiremagento.com 
- * Suport Email: hiremagento@gmail.com
- *
- * */
 class Buyshop_Testimonial_Adminhtml_TestimonialController extends Mage_Adminhtml_Controller_Action {
 
     protected function _initAction() {
@@ -17,15 +8,12 @@ class Buyshop_Testimonial_Adminhtml_TestimonialController extends Mage_Adminhtml
     }
 
     public function indexAction() {
-        $this->_title($this->__("Testimonial"));
-        $this->_title($this->__("Manager Testimonial"));
-
         $this->_initAction();
         $this->renderLayout();
     }
 
     public function editAction() {
-        $this->_title($this->__("Testimonial"));
+        
         $this->_title($this->__("Testimonial"));
         $this->_title($this->__("Edit Item"));
 

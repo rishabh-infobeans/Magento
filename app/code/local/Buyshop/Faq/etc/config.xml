@@ -10,6 +10,24 @@ and open the template in the editor.
             <version>0.1.0</version>
         </Buyshop_Faq>
     </modules>
+    <frontend>
+        <routers>
+            <faq>
+                <use>standard</use>
+                <args>
+                    <module>Buyshop_Faq</module>
+                    <frontName>faq</frontName>
+                </args>
+            </faq>
+        </routers>
+        <layout>
+            <updates>
+                <faq>
+                    <file>faq.xml</file>
+                </faq>
+            </updates>
+        </layout>
+    </frontend>
     <admin>
         <routers>
             <adminhtml>
@@ -22,6 +40,11 @@ and open the template in the editor.
         </routers>
     </admin>
     <global>
+        <blocks>
+            <faq>
+                <class>Buyshop_Faq_Block</class>
+            </faq>
+        </blocks>
         <helpers>
             <faq>
                 <class>Buyshop_Faq_Helper</class>
@@ -30,16 +53,16 @@ and open the template in the editor.
         <models>
             <faq>
                 <class>Buyshop_Faq_Model</class>
-                <resourceModel>faq_resource</resourceModel>
+                <resourceModel>faq_mysql4</resourceModel>
             </faq>
-            <faq_resource>
-                <class>Buyshop_Faq_Model_Resource</class>
-                <entities>
+            <faq_mysql4>
+                <class>Buyshop_Faq_Model_Mysql4</class>
+                <entities>		  
                     <faq>
                         <table>buyshop_faq</table>
                     </faq>
                 </entities>
-            </faq_resource>
+            </faq_mysql4>
         </models>
         <resources>
             <faq_setup>

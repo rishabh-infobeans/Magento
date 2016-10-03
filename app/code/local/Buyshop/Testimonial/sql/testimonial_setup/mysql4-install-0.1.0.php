@@ -1,13 +1,5 @@
 <?php
-/**
- * Magento Testimonial
- *
- * Testimonial Plus for Magento
- * Author: Hire Magento
- * Website: www.hiremagento.com 
- * Suport Email: hiremagento@gmail.com
- *
-**/
+
 $installer = $this;
 $installer->startSetup();
 $installer->run(" 
