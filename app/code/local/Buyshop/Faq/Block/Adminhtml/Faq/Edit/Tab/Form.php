@@ -37,7 +37,7 @@ class Buyshop_Faq_Block_Adminhtml_Faq_Edit_Tab_Form extends Mage_Adminhtml_Block
             "label" => Mage::helper("faq")->__("Description"),
             "class" => "required-entry",
             "required" => true,
-            "name" => "description",
+            "name" => "desc",
         ));
         if (Mage::getSingleton("adminhtml/session")->getFaqData()) {
             $form->setValues(Mage::getSingleton("adminhtml/session")->getFaqData());

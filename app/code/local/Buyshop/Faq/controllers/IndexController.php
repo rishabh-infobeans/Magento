@@ -13,13 +13,22 @@
  */
 class Buyshop_Faq_IndexController extends Mage_Core_Controller_Front_Action {
 
-    public function testModelAction() {
-        $params = $this->getRequest()->getParams();
-        $faq = Mage::getModel('faq/faq');
-        echo("Loading the blogpost with an ID of " . $params['id']);
-        $faq->load($params['id']);
-        $data = $faq->getData();
-        var_dump($data);
+    public function IndexAction() {
+        $this->loadLayout();
+        $this->getLayout()->getBlock("head")->setTitle($this->__("FAQ"));
+//        $breadcrumbs = $this->getLayout()->getBlock("breadcrumbs");
+//        $breadcrumbs->addCrumb("home", array(
+//            "label" => $this->__("Home"),
+//            "title" => $this->__("Home"),
+//            "link" => Mage::getBaseUrl()
+//        ));
+//
+//        $breadcrumbs->addCrumb("faq", array(
+//            "label" => $this->__("Faq"),
+//            "title" => $this->__("Faq")
+//        ));
+
+        $this->renderLayout();
     }
 
 }

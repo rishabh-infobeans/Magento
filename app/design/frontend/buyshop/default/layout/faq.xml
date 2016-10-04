@@ -4,8 +4,26 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-
-
-<root>
-    
-</root>
+<layout version="0.1.0">
+    <default>
+        <reference name="head">
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/faq.css</name>
+                <params/>
+            </action>
+        </reference>
+        <reference name="left">
+            <remove name="testimonial_sidebar-left" />
+        </reference>
+        <reference name="right">
+            <remove name="catalog.compare.sidebar" />
+            <remove name="right.reports.product.viewed"/>
+        </reference>
+    </default>
+    <faq_index_index>
+        <reference name="content">
+            <block type="faq/faq" name="faq" template="faq/faq.phtml"/>
+        </reference>
+    </faq_index_index>
+</layout>

@@ -1,8 +1,22 @@
 <?php
-
-/* 
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+?>
+<?php $collection = Mage::getModel('faq/faq')->getCollection(); ?>
+<div class="box_3">
+    <h3><?php echo $this->__('Frequently Asked Question'); ?></h3>
+</div>
+<?php foreach ($collection as $data_set): ?>
+    <div class="dropdown">
+        <button class="dropbtn"><?php echo $data_set->getData('title'); ?></button>
+        <div class="dropdown-content">
+            <a href="#"><?php echo $data_set->getData('desc'); ?></a>
+        </div>
+    </div>
+<?php endforeach; ?>
+</div>
+
 

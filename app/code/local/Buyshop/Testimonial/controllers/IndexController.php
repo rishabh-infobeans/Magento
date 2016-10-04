@@ -15,8 +15,8 @@ class Buyshop_Testimonial_IndexController extends Mage_Core_Controller_Front_Act
 	  $this->getLayout()->getBlock("head")->setTitle($this->__("Testimonial"));
 	        $breadcrumbs = $this->getLayout()->getBlock("breadcrumbs");
       $breadcrumbs->addCrumb("home", array(
-                "label" => $this->__("Home Page"),
-                "title" => $this->__("Home Page"),
+                "label" => $this->__("Home"),
+                "title" => $this->__("Home"),
                 "link"  => Mage::getBaseUrl()
 		   ));
 

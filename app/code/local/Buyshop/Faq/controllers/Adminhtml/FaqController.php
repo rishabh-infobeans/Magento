@@ -83,8 +83,6 @@ class Buyshop_Faq_Adminhtml_FaqController extends Mage_Adminhtml_Controller_Acti
         if ($post_data) {
 
             try {
-
-
                 //$post_data['sidebar']=implode(',',$post_data['sidebar']);
                 $model = Mage::getModel("faq/faq");
                 if ($this->getRequest()->getParam('id') <= 0) {
