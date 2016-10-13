@@ -18,7 +18,6 @@ class Buyshop_Faq_Block_Adminhtml_Faq_Edit extends Mage_Adminhtml_Block_Widget_F
                 ), -100);
 
 
-
         $this->_formScripts[] = "function saveAndContinueEdit(){
             editForm.submit($('edit_form').action+'back/edit/');
             }";

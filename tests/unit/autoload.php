@@ -7,6 +7,6 @@ ini_set('memory_limit', '512M');
 //Include Magento libraries
 require_once 'Mage.php';
 //Start the Magento application
-Mage::app('en');
+Mage::app('default');
 //Avoid issues "Headers already send"
 session_start();

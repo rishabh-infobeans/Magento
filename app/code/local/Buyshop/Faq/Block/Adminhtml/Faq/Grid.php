@@ -35,6 +35,7 @@ class Buyshop_Faq_Block_Adminhtml_Faq_Grid extends Mage_Adminhtml_Block_Widget_G
             'width' => '10px',
             'index' => 'faq_id',
         ));
+        
 
         $this->addColumn('title', array(
             'header' => Mage::helper('faq')->__('Title'),

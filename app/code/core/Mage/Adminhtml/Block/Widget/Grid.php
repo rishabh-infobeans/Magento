@@ -312,6 +312,7 @@ class Mage_Adminhtml_Block_Widget_Grid extends Mage_Adminhtml_Block_Widget
             $this->_columns[$columnId] = $this->getLayout()->createBlock('adminhtml/widget_grid_column')
                 ->setData($column)
                 ->setGrid($this);
+           
         }
         /*elseif ($column instanceof Varien_Object) {
             $this->_columns[$columnId] = $column;
